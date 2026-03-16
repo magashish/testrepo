@@ -94,14 +94,38 @@
 }
 
 /* ── Responsive ──────────────────────────────────── */
-@media (max-width: 576px) {
+@media (max-width: 767px) {
+
+  /* Hero padding */
+  .contact-hero { padding: 2.5rem 1rem 2.5rem; }
+
+  /* Title size */
+  .contact-hero-title { font-size: 2.4rem; }
+
+  /* Contact details: stack vertically, left-aligned with icon */
   .contact-details-row {
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding-left: 0.5rem;
   }
 
-  .contact-detail-item {
-    font-size: 0.85rem;
+  .contact-detail-item { font-size: 0.85rem; }
+
+  /* Also-like cards – full width stacked */
+  .also-like-card img { height: 240px; }
+
+  /* Reviews – horizontal scroll on mobile (shows 1.5 cards) */
+  .reviews-section .row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+  .reviews-section .row::-webkit-scrollbar { display: none; }
+  .reviews-section .col-md-4 {
+    flex: 0 0 80%;
+    max-width: 80%;
   }
 }

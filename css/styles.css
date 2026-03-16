@@ -48,13 +48,13 @@ body {
   color: #111;
 }
 
-/* Search */
-.search-wrapper {
+/* Search – desktop */
+.site-search {
   position: relative;
   width: 280px;
 }
 
-.search-wrapper .bi-search {
+.site-search .bi-search {
   position: absolute;
   left: 12px;
   top: 50%;
@@ -64,7 +64,7 @@ body {
   pointer-events: none;
 }
 
-.search-wrapper input {
+.site-search input {
   background: #f2f2f2;
   border: none;
   border-radius: 50px;
@@ -75,7 +75,7 @@ body {
   transition: background 0.2s;
 }
 
-.search-wrapper input:focus {
+.site-search input:focus {
   outline: none;
   background: #eaeaea;
 }
@@ -580,13 +580,70 @@ body {
 .footer-socials a:hover { color: var(--pink); }
 
 /* ═══════════════════════════════════════════════════
-   RESPONSIVE TWEAKS
+   RESPONSIVE  ≤ 767 px  (mobile)
 ═══════════════════════════════════════════════════ */
-@media (max-width: 768px) {
-  .hero-section { min-height: 380px; }
-  .product-card { width: 195px; }
-  .product-img-wrap { height: 230px; }
-  .btn-view { opacity: 1; }   /* always visible on touch */
-  .recycled-banner { font-size: 0.75rem; text-align: center; }
-  .also-like-card img { height: 180px; }
+@media (max-width: 767px) {
+
+  /* ── Navbar ── */
+  .site-navbar .container-fluid { row-gap: 0.5rem; }
+
+  /* Search drops to its own full-width row */
+  .site-search {
+    width: 100%;
+    order: 3;           /* below brand + icons */
+    flex: 0 0 100%;
+    padding-bottom: 0.4rem;
+  }
+
+  /* ── Hero ── */
+  .hero-section { min-height: 320px; }
+  .hero-title   { font-size: 2rem; }
+
+  /* ── Feature tags ── */
+  .feature-tags-section .d-flex {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .feature-tags-section .d-flex::-webkit-scrollbar { display: none; }
+  .feature-tag { flex-shrink: 0; }
+
+  /* ── Products ── */
+  .product-card       { width: 175px; }
+  .product-img-wrap   { height: 210px; }
+  .btn-view           { opacity: 1; }   /* always visible on touch */
+
+  /* ── "You May Also Like" – stack full-width, taller ── */
+  .also-like-card img { height: 260px; }
+
+  /* ── Recycled banner – stack text + button ── */
+  .recycled-banner {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  /* ── Reviews – single column ── */
+  .reviews-section .col-md-4 { flex: 0 0 100%; max-width: 100%; }
+
+  /* ── Sustainable – stack image below text ── */
+  .sustainable-section .col-lg-5 { order: 2; }
+  .sustainable-section .col-lg-7 { order: 1; }
+
+  /* ── Footer – centre everything ── */
+  .site-footer .row       { text-align: center; }
+  .footer-logo            { font-size: 2.6rem; }
+  .footer-links           { align-items: center; }
+  .footer-socials         { justify-content: center !important; }
+  .footer-copy            { text-align: center; }
+}
+
+/* ── Desktop search centering (≥ 768 px) ── */
+@media (min-width: 768px) {
+  .site-search { width: 280px; margin: 0 auto; }
+  .nav-icons   { margin-left: auto !important; }
 }

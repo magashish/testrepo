@@ -112,25 +112,38 @@
 }
 
 /* ── Responsive ──────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+  /* Hero: image on top, pink text block below */
   .story-hero {
     flex-direction: column;
     min-height: auto;
   }
 
-  .story-hero-left {
-    flex: none;
-    padding: 2.5rem 1.5rem;
-    order: 2;
-  }
-
   .story-hero-right {
     flex: none;
-    height: 260px;
+    height: 240px;
     order: 1;
+    width: 100%;
   }
 
   .story-hero-right::before { display: none; }
 
-  .founder-portrait { height: 260px; }
+  .story-hero-left {
+    flex: none;
+    width: 100%;
+    padding: 2rem 1.5rem 2.5rem;
+    order: 2;
+    text-align: center;
+  }
+
+  .story-hero-left .d-flex { justify-content: center; }
+
+  /* Founder */
+  .founder-portrait { height: 300px; }
+
+  .founder-thumb { height: 80px; }
+
+  /* Reviews – single column */
+  .reviews-section .col-md-4 { flex: 0 0 100%; max-width: 100%; }
 }
