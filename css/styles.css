@@ -1,28 +1,27 @@
 /* ═══════════════════════════════════════════════════
    GLOBAL
 ═══════════════════════════════════════════════════ */
-@font-face {
-  font-family: "Elza Medium";
-  src: url("../fonts/Elza-Medium.eot");
-  src: url("../fonts/Elza-Medium.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Elza-Medium.woff") format("woff"),
-       url("../fonts/Elza-Medium.woff2") format("woff2"),
-       url("../fonts/Elza-Medium.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+@font-face{
+    font-family: "Elza Medium";
+    src: url("fonts/Elza-Medium.eot");
+    src: url("fonts/Elza-Medium.eot?#iefix")format("embedded-opentype"),
+        url("fonts/Elza-Medium.woff")format("woff"),
+        url("fonts/Elza-Medium.woff2")format("woff2"),
+        url("fonts/Elza-Medium.ttf")format("truetype");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
 }
-
 @font-face {
-  font-family: 'Didot';
-  src: url('../fonts/Didot-HTF-B11-Bold.eot');
-  src: url('../fonts/Didot-HTF-B11-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/Didot-HTF-B11-Bold.woff2') format('woff2'),
-       url('../fonts/Didot-HTF-B11-Bold.woff') format('woff'),
-       url('../fonts/Didot-HTF-B11-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: 'Didot';
+    src: url('fonts/Didot-HTF-B11-Bold.eot');
+    src: url('fonts/Didot-HTF-B11-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Didot-HTF-B11-Bold.woff2') format('woff2'),
+        url('fonts/Didot-HTF-B11-Bold.woff') format('woff'),
+        url('fonts/Didot-HTF-B11-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
@@ -44,9 +43,9 @@ body {
   color: var(--text);
   overflow-x: hidden;
 }
-
-img { max-width: 100%; }
-
+img{
+  max-width: 100%;
+}
 /* ═══════════════════════════════════════════════════
    NAVBAR
 ═══════════════════════════════════════════════════ */
@@ -112,11 +111,13 @@ img { max-width: 100%; }
 /* Nav icons */
 .nav-icons a {
   color: #111;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-decoration: none;
   transition: color 0.2s;
 }
-
+.nav-icons a i.bi.bi-list {
+    font-size: 2rem;
+}
 .nav-icons a:hover { color: var(--pink); }
 
 /* ═══════════════════════════════════════════════════
@@ -151,7 +152,6 @@ img { max-width: 100%; }
   color: #fff;
   line-height: 1.1;
   margin-bottom: 0.3rem;
-  max-width: 900px;
 }
 
 .hero-title em { font-style: italic; }
@@ -164,13 +164,15 @@ img { max-width: 100%; }
   margin: 0.6rem auto 0.8rem;
   border-radius: 2px;
 }
-
+.hero-title {
+    max-width: 900px;
+}
 .hero-subtitle {
-  font-family: var(--serif);
   font-size: clamp(0.9rem, 2.5vw, 3.25rem);
-  font-weight: bold;
   letter-spacing: 0.12em;
+  font-weight: bold;
   color: #fff;
+  font-family: var(--serif);
   margin-bottom: 50px;
 }
 
@@ -178,14 +180,14 @@ img { max-width: 100%; }
    SHARED BUTTONS
 ═══════════════════════════════════════════════════ */
 .btn-shop {
-  background: var(--pink);
-  color: #fff;
-  border: 2px solid var(--pink);
-  border-radius: 50px;
-  padding: 0.5rem 4rem;
-  font-size: 1rem;
-  font-family: var(--sans);
-  transition: background 0.2s, border-color 0.2s;
+    background: var(--pink);
+    color: #fff;
+    border: 2px solid var(--pink);
+    border-radius: 50px;
+    padding: 0.5rem 4rem;
+    font-size: 1rem;
+    font-family: var(--sans);
+    transition: background 0.2s, border-color 0.2s;
 }
 
 .btn-shop:hover {
@@ -194,7 +196,10 @@ img { max-width: 100%; }
   color: #fff;
 }
 
-.btn-shop-lg { padding: 0.65rem 4rem; font-size: 1.5rem; }
+.btn-shop-lg {
+    padding: 0.65rem 4rem;
+    font-size: 1.5rem;
+}
 
 .btn-subscribe {
   background: #fff;
@@ -233,10 +238,11 @@ img { max-width: 100%; }
 .pink-banner {
   background: var(--pink);
   color: #fff;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1.5rem, 2.5vw, 3.5rem);
   font-weight: normal;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
+  font-family: var(--serif);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -245,10 +251,10 @@ img { max-width: 100%; }
 .products-section { background: #fff; }
 
 .section-heading {
-  font-family: var(--serif2);
-  font-size: clamp(1.5rem, 3vw, 3rem);
-  font-weight: 400;
-  color: #111;
+    font-family: var(--serif2);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 400;
+    color: #111;
 }
 
 /* Product Tabs */
@@ -259,13 +265,13 @@ img { max-width: 100%; }
   border: none;
   border-bottom: 2px solid transparent;
   padding: 0.4rem 1.2rem;
-  font-family: var(--serif2);
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: #888;
   cursor: pointer;
   transition: color 0.2s, border-color 0.2s;
+  font-family: var(--serif2);
 }
 
 .product-tab-btn.active,
@@ -326,7 +332,7 @@ img { max-width: 100%; }
   white-space: nowrap;
 }
 
-.product-card .btn-view:hover { background: var(--pink-dark); color: #fff; }
+.product-card .btn-view:hover { background: var(--pink-dark); color:#fff }
 
 .product-name {
   font-size: 0.85rem;
@@ -344,9 +350,9 @@ img { max-width: 100%; }
 .price-old {
   color: var(--muted);
   text-decoration: line-through;
-  text-decoration-color: var(--pink);
   font-weight: 400;
   margin-right: 2px;
+  text-decoration-color: var(--pink);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -374,33 +380,32 @@ img { max-width: 100%; }
 }
 
 .dark-section-text {
-  font-size: 1.35rem;
-  line-height: 1.5;
-  color: #fff;
-  margin-bottom: 25px;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    color: #fff;
+    margin-bottom: 25px;
 }
 
 /* ═══════════════════════════════════════════════════
    OUR APRON
 ═══════════════════════════════════════════════════ */
-.our-apron-section { background: #fff; padding: 70px 0; }
+.our-apron-section { background: #fff;padding: 70px 0; }
 
-.apron-heading {
-  font-family: var(--serif2);
-  color: var(--pink);
-  font-size: 2.5rem;
-  font-weight: 400;
+.apron-heading, .sustainable-heading {
+    font-family: var(--serif2);
+    color: var(--pink);
+    font-size: 2.5rem;
+    font-weight: 400;
 }
-
-.apron-text {
+.apron-text, .sustainable-text {
   font-size: 1.15rem;
   color: #444;
 }
 
 .apron-group-img {
-  max-width: 420px;
-  width: 100%;
-  box-shadow: 0 0px 14px rgba(0,0,0,0.3);
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 0px 14px rgba(0,0,0,0.3);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -463,25 +468,10 @@ img { max-width: 100%; }
 ═══════════════════════════════════════════════════ */
 .sustainable-section { background: #fff; }
 
-.sustainable-heading {
-  font-family: var(--serif);
-  color: var(--pink);
-  font-size: 1.9rem;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.sustainable-text {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 0.75rem;
-}
-
 .sustainable-img {
   max-width: 100%;
-  width: 100%;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  width: 47%;
+  box-shadow: 0 0px 14px rgba(0,0,0,0.3);
 }
 
 /* ═══════════════════════════════════════════════════
@@ -744,7 +734,7 @@ img { max-width: 100%; }
 
 .contact-input:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 156, 192, 0.5);
+  box-shadow: 0 0 0 2px rgba(233, 30, 140, 0.35);
   background: #fff;
 }
 
@@ -803,6 +793,7 @@ img { max-width: 100%; }
   /* ── Navbar ── */
   .site-navbar .container-fluid { row-gap: 0.5rem; }
 
+  /* Search drops to its own full-width row */
   .site-search {
     width: 100%;
     order: 3;
@@ -829,6 +820,7 @@ img { max-width: 100%; }
   /* ── Index: Product cards ── */
   .product-card     { width: 175px; }
   .product-img-wrap { height: 210px; }
+  .btn-view         { opacity: 1; }
 
   /* ── Index: Sustainable – stack image below text ── */
   .sustainable-section .col-lg-5 { order: 2; }
@@ -888,7 +880,7 @@ img { max-width: 100%; }
 
 /* ── Desktop search centering (≥ 768 px) ── */
 @media (min-width: 768px) {
-  .site-search      { width: 280px; margin: 0 auto; order: 2; }
-  .nav-icons        { margin-left: auto !important; order: 3; }
-  a.navbar-brand    { order: 1; }
+  .site-search { width: 280px; margin: 0 auto; order: 2;}
+  .nav-icons   { margin-left: auto !important; order: 3;}
+  a.navbar-brand {order: 1;}
 }
