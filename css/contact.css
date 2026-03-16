@@ -1,0 +1,107 @@
+/* ═══════════════════════════════════════════════════
+   CONTACT PAGE  –  contact.css
+   Extends css/styles.css (shared variables / components)
+═══════════════════════════════════════════════════ */
+
+/* ── Contact Hero (pink enquiries block) ─────────── */
+.contact-hero {
+  background: var(--pink);
+  padding: 4rem 1rem 3.5rem;
+}
+
+.contact-hero-title {
+  font-family: var(--serif);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #111;
+  /* Small-caps effect matching the design */
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  margin-bottom: 0;
+}
+
+/* ── Contact form inputs ─────────────────────────── */
+.contact-input {
+  background: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.65rem 1.4rem;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: none;
+}
+
+.contact-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(233, 30, 140, 0.35);
+  background: #fff;
+}
+
+.contact-input.is-invalid {
+  box-shadow: 0 0 0 2px #dc3545;
+}
+
+/* ── Submit button ───────────────────────────────── */
+.btn-contact-submit {
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+  border-radius: 50px;
+  padding: 0.65rem 2rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-contact-submit:hover {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+/* ── Contact details row ─────────────────────────── */
+.contact-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+  color: #111;
+  font-weight: 500;
+}
+
+.contact-detail-item .bi {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  color: #111;
+}
+
+/* ── Shared underline accents (mirrors story.css) ── */
+.reviews-underline,
+.also-like-underline {
+  width: 40px;
+  height: 3px;
+  background: var(--pink);
+  border-radius: 2px;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 576px) {
+  .contact-details-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-detail-item {
+    font-size: 0.85rem;
+  }
+}
