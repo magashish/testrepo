@@ -3,227 +3,468 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SeMe™ – Wear a SeMe Apron</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
-  <!-- Bootstrap Icons -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    rel="stylesheet"
-  />
-  <!-- Google Fonts: Playfair Display (serif, matches logo style) + Inter -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    /* ── Logo ── */
-    .navbar-brand .logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      letter-spacing: -1px;
-      color: #111;
-      line-height: 1;
-    }
-    .navbar-brand .logo-tm {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.65rem;
-      vertical-align: super;
-      color: #111;
-    }
-
-    /* ── Navbar ── */
-    .site-navbar {
-      background: #fff;
-      border-bottom: 1px solid #e8e8e8;
-      padding: 0.75rem 2rem;
-    }
-
-    /* ── Search bar ── */
-    .search-wrapper {
-      position: relative;
-      max-width: 320px;
-      width: 100%;
-    }
-    .search-wrapper .bi-search {
-      position: absolute;
-      left: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #888;
-      font-size: 1rem;
-    }
-    .search-wrapper input {
-      background: #f3f3f3;
-      border: none;
-      border-radius: 50px;
-      padding: 0.45rem 1rem 0.45rem 2.4rem;
-      font-size: 0.9rem;
-      color: #555;
-      width: 100%;
-    }
-    .search-wrapper input:focus {
-      outline: none;
-      background: #ebebeb;
-    }
-
-    /* ── Nav icons ── */
-    .nav-icons a {
-      color: #111;
-      font-size: 1.4rem;
-      text-decoration: none;
-      line-height: 1;
-    }
-    .nav-icons a:hover {
-      color: #e91e8c;
-    }
-
-    /* ── Hero ── */
-    .hero-section {
-      position: relative;
-      min-height: 520px;
-      background: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80')
-        center center / cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    /* dark overlay for text legibility */
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.32);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 6vw, 4.5rem);
-      font-weight: 700;
-      color: #fff;
-      line-height: 1.1;
-      margin-bottom: 0.2rem;
-    }
-    .hero-title .brand-inline {
-      font-style: italic;
-    }
-
-    /* Pink underline accent */
-    .hero-accent-bar {
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #e91e8c;
-      margin: 0.5rem auto 0.9rem;
-      border-radius: 2px;
-    }
-
-    .hero-subtitle {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(0.95rem, 2.5vw, 1.35rem);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 2rem;
-    }
-
-    /* ── Hero buttons ── */
-    .btn-shop {
-      background: #e91e8c;
-      color: #fff;
-      border: 2px solid #e91e8c;
-      border-radius: 50px;
-      padding: 0.55rem 2.4rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-shop:hover {
-      background: #c5197a;
-      border-color: #c5197a;
-      color: #fff;
-    }
-
-    .btn-subscribe {
-      background: #fff;
-      color: #111;
-      border: 2px solid #fff;
-      border-radius: 50px;
-      padding: 0.55rem 2.2rem;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 1rem;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-subscribe:hover {
-      background: rgba(255, 255, 255, 0.85);
-      color: #111;
-    }
-  </style>
+  <title>SeMe™ – Don't Hide Your Style</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- ══════════════════════════════════
+  <!-- ══════════════════════════════════════════
        NAVBAR
-  ══════════════════════════════════ -->
-  <nav class="navbar site-navbar">
-    <div class="container-fluid d-flex align-items-center gap-3">
-
-      <!-- Logo -->
+  ══════════════════════════════════════════ -->
+  <nav class="navbar site-navbar sticky-top">
+    <div class="container-fluid px-4 d-flex align-items-center">
       <a class="navbar-brand me-auto" href="#">
-        <span class="logo-text">SeMe<span class="logo-tm">™</span></span>
+        <span class="logo-text">SeMe<sup class="logo-tm">™</sup></span>
       </a>
-
-      <!-- Search -->
-      <div class="search-wrapper d-none d-md-block">
+      <div class="search-wrapper mx-auto d-none d-md-block">
         <i class="bi bi-search"></i>
         <input type="text" placeholder="Search for a product..." />
       </div>
-
-      <!-- Icons -->
-      <div class="nav-icons d-flex align-items-center gap-3 ms-auto ms-md-3">
+      <div class="nav-icons d-flex align-items-center gap-3 ms-auto">
         <a href="#" aria-label="Wishlist"><i class="bi bi-heart"></i></a>
         <a href="#" aria-label="Cart"><i class="bi bi-bag"></i></a>
-        <a href="#" aria-label="Menu"><i class="bi bi-list"></i></a>
+        <a href="#" aria-label="Menu" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i></a>
       </div>
-
     </div>
   </nav>
 
-  <!-- ══════════════════════════════════
+  <!-- Off-canvas mobile menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title logo-text">SeMe<sup class="logo-tm">™</sup></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li><a href="#" class="nav-link py-2">Shop</a></li>
+        <li><a href="#" class="nav-link py-2">Story</a></li>
+        <li><a href="#" class="nav-link py-2">What's a TPU</a></li>
+        <li><a href="#" class="nav-link py-2">Returns</a></li>
+        <li><a href="#" class="nav-link py-2">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
        HERO
-  ══════════════════════════════════ -->
+  ══════════════════════════════════════════ -->
   <section class="hero-section">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Wear a <span class="brand-inline">SeMe</span> Apron
-      </h1>
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center">
+      <h1 class="hero-title">Wear a <em>SeMe</em> Apron</h1>
       <span class="hero-accent-bar"></span>
       <p class="hero-subtitle">Don't Hide Your Style</p>
-      <div class="d-flex justify-content-center gap-3 flex-wrap">
-        <a href="#" class="btn btn-shop">Shop</a>
-        <a href="#" class="btn btn-subscribe">Subscribe</a>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mt-3">
+        <a href="#products" class="btn btn-shop">Shop</a>
+        <a href="#enquiries" class="btn btn-subscribe">Subscribe</a>
       </div>
     </div>
   </section>
 
-  <!-- Bootstrap 5 JS -->
+  <!-- ══════════════════════════════════════════
+       FEATURE TAGS
+  ══════════════════════════════════════════ -->
+  <section class="feature-tags-section py-3">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <span class="feature-tag">Unisex</span>
+        <span class="feature-tag">Durable</span>
+        <span class="feature-tag">Hygienic</span>
+        <span class="feature-tag">Waterproof</span>
+        <span class="feature-tag">Recyclable</span>
+        <span class="feature-tag">Biodegradable</span>
+        <span class="feature-tag">Sustainable</span>
+        <span class="feature-tag">Unisex</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PINK BANNER
+  ══════════════════════════════════════════ -->
+  <div class="pink-banner text-center py-3">
+    <strong>UK'S FIRST TRANSPARENT HAIRDRESSING APRON</strong>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       OUR PRODUCTS
+  ══════════════════════════════════════════ -->
+  <section class="products-section py-5" id="products">
+    <div class="container">
+      <h2 class="section-heading text-center mb-4">Our Products</h2>
+
+      <!-- Product Tabs -->
+      <ul class="nav product-tabs justify-content-center mb-4" id="productTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="product-tab-btn active" id="aprons-tab" data-bs-toggle="tab" data-bs-target="#aprons" type="button" role="tab">APRONS</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="product-tab-btn" id="straps-tab" data-bs-toggle="tab" data-bs-target="#straps" type="button" role="tab">STRAPS</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="product-tab-btn" id="scrunchies-tab" data-bs-toggle="tab" data-bs-target="#scrunchies" type="button" role="tab">SCRUNCHIES</button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="productTabsContent">
+        <!-- APRONS TAB -->
+        <div class="tab-pane fade show active" id="aprons" role="tabpanel">
+          <div class="products-scroll-wrapper">
+            <div class="products-row">
+              <!-- Product Card 1 -->
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1594938298603-c8148c4a2a9f?w=400&h=450&fit=crop" alt="Apron with Straps Limon Colour" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Apron with Straps (Limon Colour)</p>
+                <p class="product-price"><span class="price-old">€85.00</span> – €49.00</p>
+              </div>
+              <!-- Product Card 2 -->
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&h=450&fit=crop" alt="Apron with Straps Rainbow" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Apron with Straps (Rainbow)</p>
+                <p class="product-price"><span class="price-old">€75.00</span> – €43.00</p>
+              </div>
+              <!-- Product Card 3 -->
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=400&h=450&fit=crop" alt="Apron only No Straps" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Apron only (No Straps)</p>
+                <p class="product-price"><span class="price-old">€36.00</span> – €27.00</p>
+              </div>
+              <!-- Product Card 4 -->
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&h=450&fit=crop" alt="Apron with Straps Onyx Colour" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Apron with Straps (Onyx Colour)</p>
+                <p class="product-price"><span class="price-old">€80.00</span> – €48.30</p>
+              </div>
+              <!-- Product Card 5 -->
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&h=450&fit=crop" alt="Apron with Straps Classic" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Apron with Straps (Classic)</p>
+                <p class="product-price"><span class="price-old">€80.00</span> – €44.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STRAPS TAB -->
+        <div class="tab-pane fade" id="straps" role="tabpanel">
+          <div class="products-scroll-wrapper">
+            <div class="products-row">
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=450&fit=crop" alt="Strap Set Rainbow" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Strap Set (Rainbow)</p>
+                <p class="product-price"><span class="price-old">€35.00</span> – €22.00</p>
+              </div>
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=450&fit=crop" alt="Strap Set Classic" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Strap Set (Classic)</p>
+                <p class="product-price"><span class="price-old">€30.00</span> – €18.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SCRUNCHIES TAB -->
+        <div class="tab-pane fade" id="scrunchies" role="tabpanel">
+          <div class="products-scroll-wrapper">
+            <div class="products-row">
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=400&h=450&fit=crop" alt="Scrunchie Pack" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Scrunchie Pack (Mixed)</p>
+                <p class="product-price"><span class="price-old">€18.00</span> – €12.00</p>
+              </div>
+              <div class="product-card">
+                <div class="product-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&h=450&fit=crop" alt="Scrunchie Set Pink" />
+                  <a href="#" class="btn btn-view">View</a>
+                </div>
+                <p class="product-name">Scrunchie Set (Pink)</p>
+                <p class="product-price"><span class="price-old">€15.00</span> – €10.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-shop btn-shop-lg">Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       DON'T HIDE YOUR STYLE – DARK SECTION
+  ══════════════════════════════════════════ -->
+  <section class="dark-style-section">
+    <div class="dark-overlay"></div>
+    <div class="container position-relative py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center text-white">
+          <h2 class="dark-section-title mb-4">DON'T HIDE YOUR STYLE</h2>
+          <p class="dark-section-text">
+            The apron is lightweight and see-through and allows you to show off your
+            individuality and style and not cover it up like most traditional aprons whilst
+            providing you with great protection for your clothes.
+          </p>
+          <p class="dark-section-text">
+            It is waterproof and the fact that it is wipeable means it is also hygienic as it can be
+            cleaned and sanitised easily and quickly on a regular basis.
+          </p>
+          <p class="dark-section-text">
+            The straps on the apron come in different colours and are interchangeable, so that you
+            can have different colours for different styles and outfits! It is Unisex and Unisex.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+            <a href="#enquiries" class="btn btn-outline-light rounded-pill px-4">Contact Us</a>
+            <a href="#enquiries" class="btn btn-subscribe">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       OUR APRON
+  ══════════════════════════════════════════ -->
+  <section class="our-apron-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <h3 class="apron-heading mb-4">Our Apron</h3>
+          <p class="apron-text">
+            A fashion statement in itself, our see-through apron allows you to show off your
+            individuality, your fashion sense, look great and protect your expensive outfit.
+          </p>
+          <p class="apron-text">
+            In addition to being superior quality it is chic and stylish, versatile, comfortable
+            and of course practical.
+          </p>
+          <p class="apron-text">
+            It comes with a choice of strap colours which are interchangeable to suit your style,
+            outfit or mood!
+          </p>
+          <p class="apron-text">
+            The apron is suited to any professional, but for those: for example those working in
+            retail, catering, healthcare, or simply at home. In fact anywhere that letting your
+            individual personality shine through really matters.
+          </p>
+          <p class="apron-text">
+            Our market research has helped us to design and make our apron comfortable with
+            lightweight straps. It is also the perfect length and width, providing great coverage,
+            and suitable for all body types.
+          </p>
+        </div>
+        <div class="col-lg-5 text-center">
+          <img
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=500&fit=crop"
+            alt="SeMe Apron Group"
+            class="img-fluid rounded apron-group-img"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RECYCLED PACKAGING BANNER
+  ══════════════════════════════════════════ -->
+  <div class="recycled-banner d-flex align-items-center justify-content-center gap-3 py-3 px-4">
+    <span>ALL OF OUR PACKAGING IS ALSO MADE FROM RECYCLED MATERIALS.</span>
+    <a href="#" class="btn btn-shop btn-sm px-4">Shop</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       YOU MAY ALSO LIKE
+  ══════════════════════════════════════════ -->
+  <section class="also-like-section py-5">
+    <div class="container">
+      <h2 class="section-heading mb-4">You May Also Like</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="also-like-card">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Straps" />
+            <div class="also-like-label">STRAPS</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="also-like-card">
+            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4a2a9f?w=600&h=400&fit=crop" alt="Aprons" />
+            <div class="also-like-label">APRONS</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="also-like-card">
+            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?w=600&h=400&fit=crop" alt="Scrunchies" />
+            <div class="also-like-label">SCRUNCHIES</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SUSTAINABLE SECTION
+  ══════════════════════════════════════════ -->
+  <section class="sustainable-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center">
+          <img
+            src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=500&h=550&fit=crop"
+            alt="Sustainable Fashion"
+            class="img-fluid rounded sustainable-img"
+          />
+        </div>
+        <div class="col-lg-7">
+          <h3 class="sustainable-heading mb-4">Sustainable</h3>
+          <p class="sustainable-text">
+            The apron itself is made from a 100% sustainable material called TPU (Thermoplastic Polyurethane).
+          </p>
+          <p class="sustainable-text">
+            It is a very flexible and smooth material, but at the same time extremely strong and durable.
+          </p>
+          <p class="sustainable-text">
+            TPU is safe, 100% non-toxic, recyclable and biodegradable and is a much healthier alternative to
+            PVC which contains toxic chemicals, is harmful to the environment and is very expensive to recycle.
+            TPU offers high wear resistance and possesses excellent resistance to UV, oils, greases, and solvents.
+            This is particularly important when considering this is an apron which must be able to withstand a
+            little bit of everything.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PRODUCT REVIEWS
+  ══════════════════════════════════════════ -->
+  <section class="reviews-section py-5">
+    <div class="container">
+      <h2 class="section-heading mb-4">Product Reviews</h2>
+      <div class="row g-4">
+        <!-- Review 1 -->
+        <div class="col-md-4">
+          <div class="review-card">
+            <h5 class="review-name">Sarah Evans</h5>
+            <p class="review-text">Outstanding Product, we love it</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="col-md-4">
+          <div class="review-card">
+            <h5 class="review-name">Jane Smith</h5>
+            <p class="review-text">Gawgeous, everyone Always comments on how cool we look.</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="col-md-4">
+          <div class="review-card">
+            <h5 class="review-name">Lucy Harries</h5>
+            <p class="review-text">I absolutely love it and I wear it every day.</p>
+            <div class="review-stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ENQUIRIES
+  ══════════════════════════════════════════ -->
+  <section class="enquiries-section py-5" id="enquiries">
+    <div class="container">
+      <h2 class="enquiries-heading text-center mb-4">Enquiries</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+          <form id="enquiryForm" novalidate>
+            <div class="mb-3">
+              <input type="text" class="form-control enquiry-input" placeholder="Name" required />
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <input type="email" class="form-control enquiry-input" placeholder="Email" required />
+              </div>
+              <div class="col-6">
+                <input type="tel" class="form-control enquiry-input" placeholder="Phone" />
+              </div>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-say-hello px-5">Say hello</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container py-4">
+      <div class="row align-items-start">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <span class="footer-logo">SeMe<sup class="logo-tm">™</sup></span>
+          <p class="footer-copy mt-3 mb-0">© SeMe™ 2025</p>
+          <p class="footer-copy mb-0">Privacy Cookies</p>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Story</a></li>
+            <li><a href="#">What's a TPU</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <div class="footer-socials d-flex gap-3 justify-content-md-end">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
